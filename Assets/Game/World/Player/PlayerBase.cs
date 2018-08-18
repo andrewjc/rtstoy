@@ -23,7 +23,7 @@ namespace Game.World.Player
 
             AddBuilding(UnitType.CommandCenter, BuildingFactory.CreateBuilding(this, UnitType.CommandCenter, spawnPoint.transform.position, spawnPoint.transform.rotation));
             
-            AddUnit(UnitType.Rover, UnitFactory.CreateUnit(this, UnitType.Rover, VectorUtil.sitOnTerrain(spawnPoint.transform.position + (Vector3.forward * 10))));
+            AddUnit(UnitType.Rover, UnitFactory.CreateUnit(this, UnitType.Rover, VectorUtil.sitOnTerrain(spawnPoint.transform.position + (Vector3.forward * 10) - (Vector3.left * 2))));
             AddUnit(UnitType.Rover, UnitFactory.CreateUnit(this, UnitType.Rover, VectorUtil.sitOnTerrain(spawnPoint.transform.position + (Vector3.forward * 10) + (Vector3.left * 2))));
 
         }

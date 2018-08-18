@@ -12,7 +12,7 @@ namespace Game.World.Units.Factories
             switch (type)
             {
                 case UnitType.Rover:
-                    GameObject unit = ResourceUtils.CreateFromResource("Prefabs/Rover", startPosition, rotation) as GameObject;
+                    GameObject unit = ResourceUtils.CreateFromResource("Prefabs/Rover_Level" + playerBase.getPlayerStageNumber(), startPosition, rotation) as GameObject;
                     unit.AddComponent<PlayerUnit>().
                         SetName(GetUnitName(playerBase, type)).
                         SetPlayerBase(playerBase)
