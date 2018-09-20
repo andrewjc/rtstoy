@@ -37,6 +37,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4612285046637330}
+  - component: {fileID: 114216163032465254}
   m_Layer: 0
   m_Name: Rover_Level1
   m_TagString: Untagged
@@ -480,3 +481,16 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300006, guid: 917e29929631e264c97a7d174b0301e5, type: 3}
+--- !u!114 &114216163032465254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1156926628757166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52dfc91c444e7284290e88b5f490244e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectionRadius: 2
+  selectionShape: 0

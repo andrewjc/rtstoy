@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Game.AI;
+using Game.Utils;
 using Game.World.Units;
 using Game.World.Units.Factories;
 using UnityEngine;
@@ -9,9 +10,13 @@ namespace Game.World.Player
 {
     public class PlayerUnit : MonoBehaviour
     {
+        private bool isSelected;
+        private GameObject selectionShape;
+
         public LinkedList<AIUnitTask> taskStack;
         public AIUnitTask currentTask;
         public PlayerBase playerBase;
+
         public UnitType unitType { get; set; }
 
         public bool IsIdle => taskStack.Count == 0 && currentTask == null;
@@ -140,6 +145,34 @@ namespace Game.World.Player
                     beginIdle();
                 }
             }
+        }
+
+        public void OnSelected()
+        {
+            this.isSelected = true;
+            if (UnitFactory.IsBuilding(unitType))
+            {
+                // Square selection shape
+                selectionShape = MeshUtils.CreateCircularSelectionShape(gameObject);
+
+                selectionShape.transform.position = gameObject.transform.position;
+                selectionShape.transform.position = VectorUtil.sitOnTerrain(selectionShape.transform.position);
+                selectionShape.transform.parent = gameObject.transform;
+            }
+            else
+            {
+                // Circular selection shape
+                selectionShape = MeshUtils.CreateCircularSelectionShape(gameObject);
+
+                selectionShape.transform.position = gameObject.transform.position;
+                selectionShape.transform.position = VectorUtil.sitOnTerrain(selectionShape.transform.position);
+                selectionShape.transform.parent = gameObject.transform;
+            }
+        }
+
+        public void Deselect()
+        {
+            Destroy(selectionShape);
         }
 
         public int GetTaskCount()

@@ -1,4 +1,5 @@
-﻿using Game.Render;
+﻿using System;
+using Game.Render;
 using Game.Utils;
 using Game.World.Player;
 using Game.World.Units;
@@ -21,16 +22,16 @@ namespace Game.World
             playerBase = spawnPoint.AddComponent<PlayerBase>();
             playerBase.spawnPoint = spawnPoint;
 
-            Camera.main.transform.position = spawnPoint.transform.position + (Vector3.forward * 5);
-            Camera.main.transform.position = VectorUtil.sitOnTerrain(Camera.main.transform.position) + (Vector3.up * 5);
-            Camera.main.transform.rotation = spawnPoint.transform.rotation;
+        }
 
-            RtsCamera camComponent = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<RtsCamera>();
-            if (camComponent != null)
-            {
-                camComponent.LookAt = Camera.main.transform.position;
-                camComponent.Rotation = 180;
-            }
+        internal Vector3 getSpawnPointPosition()
+        {
+            return playerBase.spawnPoint.transform.position;      
+         }
+
+        internal PlayerBase getPlayerBase()
+        {
+            return playerBase;
         }
     }
 }
