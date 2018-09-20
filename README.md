@@ -7,7 +7,7 @@ This is a game about mining energy crystals, crafting and surviving on an alien 
 
 The general story is that your pod has crashlanded onto an alien planet. You must survive by mining the natural resources, and progressively unlocking technologies to enable you to launch back into space.
 
-![Image description](media/screenshot.jpg)
+![Image description](Media/screenshot.jpg)
 
 # Game Design
 
