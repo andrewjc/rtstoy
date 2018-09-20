@@ -21,7 +21,6 @@ namespace Game.World
             playerBase = spawnPoint.AddComponent<PlayerBase>();
             playerBase.spawnPoint = spawnPoint;
 
-
             Camera.main.transform.position = spawnPoint.transform.position + (Vector3.forward * 5);
             Camera.main.transform.position = VectorUtil.sitOnTerrain(Camera.main.transform.position) + (Vector3.up * 5);
             Camera.main.transform.rotation = spawnPoint.transform.rotation;
