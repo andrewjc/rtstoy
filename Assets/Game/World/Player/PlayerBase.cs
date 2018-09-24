@@ -10,9 +10,9 @@ namespace Game.World.Player
 {
      public class PlayerBase : MonoBehaviour
     {
-        public GameObject spawnPoint;
-
-        public Dictionary<UnitType, ArrayList> units;
+        private GameObject spawnPoint;
+        private Dictionary<UnitType, ArrayList> units;
+        private PlayerInventory playerInventory;
 
         public void Start()
         {
@@ -28,10 +28,26 @@ namespace Game.World.Player
 
         }
 
+        internal GameObject GetSpawnPoint()
+        {
+            return this.spawnPoint;
+        }
+
+        internal void SetSpawnPoint(GameObject spawnPoint)
+        {
+            this.spawnPoint = spawnPoint;
+        }
+
+        internal PlayerInventory GetInventory()
+        {
+            return playerInventory;
+        }
+
         // Use this for initialization
         public void Awake()
         {
             this.units = new Dictionary<UnitType, ArrayList>();
+            this.playerInventory = new PlayerInventory();
         }
 
         public void AddUnit(UnitType unitType, GameObject unit)
@@ -90,6 +106,9 @@ namespace Game.World.Player
         }
         
         public PlayerStage playerStage;
+        internal int workerDroneCarryMultipler;
+        internal int crystalMiningMultiplier;
+
         public int getPlayerStageNumber()
         {
             switch (playerStage)

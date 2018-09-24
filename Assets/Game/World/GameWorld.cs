@@ -1,6 +1,7 @@
 ﻿using System;
 using Game.Render;
 using Game.Utils;
+using Game.World.Objects;
 using Game.World.Player;
 using Game.World.Units;
 using UnityEngine;
@@ -20,18 +21,23 @@ namespace Game.World
             int player = 0;
 
             playerBase = spawnPoint.AddComponent<PlayerBase>();
-            playerBase.spawnPoint = spawnPoint;
+            playerBase.SetSpawnPoint(spawnPoint);
 
         }
 
         internal Vector3 getSpawnPointPosition()
         {
-            return playerBase.spawnPoint.transform.position;      
+            return playerBase.GetSpawnPoint().transform.position;      
          }
 
         internal PlayerBase getPlayerBase()
         {
             return playerBase;
+        }
+
+        internal MineableCrystal GetUnoccupiedNearbyCrystal(GameObject gameObject)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -62,7 +62,7 @@ namespace Game
 			return _instance;
 		}
 
-        internal GameWorld getGameWorld()
+        internal GameWorld GetGameWorld()
         {
             return gameWorld;
         }

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33566397163657688}
   - component: {fileID: 23381217386535418}
   - component: {fileID: 114023943636940946}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,3 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b28578a3c605ca48ae9f37285e22a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  remainingQuantity: 10
+  maxQuantity: 10
+  isOccupied: 0
+  isExhausted: 0
