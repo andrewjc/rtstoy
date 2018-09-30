@@ -2,7 +2,6 @@
 
 namespace Game.World.Objects
 {
-    public enum MineableResource { Crystal }
 
     public class Mineable : MonoBehaviour
     {

@@ -1,6 +1,21 @@
-﻿namespace Game
+﻿using Assets.Game.World.Objects;
+using Game.World.Objects;
+using UnityEngine;
+
+namespace Game
 {
-    internal class Miner
+    public class Miner : MonoBehaviour
     {
+        private MineableResource mineableResourceType;
+
+        public Miner()
+        {
+        }
+
+        public Miner SetMinableType(MineableResource resourceType)
+        {
+            this.mineableResourceType = resourceType;
+            return this;
+        }
     }
 }

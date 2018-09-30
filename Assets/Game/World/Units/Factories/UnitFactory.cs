@@ -1,5 +1,7 @@
 ﻿using System;
+using Game.AI.Unit;
 using Game.Utils;
+using Game.World.Objects;
 using Game.World.Player;
 using UnityEngine;
 
@@ -17,6 +19,11 @@ namespace Game.World.Units.Factories
                         SetName(GetUnitName(playerBase, type)).
                         SetPlayerBase(playerBase)
                         ;
+                    unit.AddComponent<Miner>()
+                        .SetMinableType(MineableResource.Crystal);
+
+                    unit.AddComponent<WorkerDroneAI>();
+
                     unit.layer = LayerMask.NameToLayer("Units");
                     return unit;
                 default:

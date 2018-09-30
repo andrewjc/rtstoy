@@ -7,7 +7,6 @@ namespace Game.World.Objects
 {
 	public class MineableCrystal : Mineable
 	{
-
         public new MineableResource resourceType
         {
             get { return MineableResource.Crystal; }

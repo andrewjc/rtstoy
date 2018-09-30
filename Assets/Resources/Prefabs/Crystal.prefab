@@ -11,6 +11,21 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1239917936103460}
   m_IsPrefabAsset: 1
+--- !u!1 &1079811460415322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4459526909452472}
+  m_Layer: 10
+  m_Name: Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1239917936103460
 GameObject:
   m_ObjectHideFlags: 0
@@ -19,9 +34,25 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4027959643255976}
-  - component: {fileID: 33566397163657688}
-  - component: {fileID: 23381217386535418}
   - component: {fileID: 114023943636940946}
+  - component: {fileID: 65673988051578972}
+  m_Layer: 10
+  m_Name: Crystal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1498026876853520
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4985802135757140}
+  - component: {fileID: 33769996665992874}
+  - component: {fileID: 23462178166433414}
   m_Layer: 10
   m_Name: Crystal
   m_TagString: Untagged
@@ -36,18 +67,46 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1239917936103460}
   m_LocalRotation: {x: -0.032658234, y: -0.067195, z: 0.10945571, w: 0.99118}
-  m_LocalPosition: {x: 1.2092, y: 3.0898, z: 19.124}
-  m_LocalScale: {x: 2.5734, y: 2.5734, z: 2.5734}
-  m_Children: []
+  m_LocalPosition: {x: -1.8677933, y: 4.967596, z: 24.224125}
+  m_LocalScale: {x: 2.5734, y: 2.5734005, z: 2.5734}
+  m_Children:
+  - {fileID: 4459526909452472}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4459526909452472
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1079811460415322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4985802135757140}
+  m_Father: {fileID: 4027959643255976}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4985802135757140
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1498026876853520}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0000000016298145, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4459526909452472}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -2.868, y: -8.079, z: 12.806001}
---- !u!23 &23381217386535418
+--- !u!23 &23462178166433414
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1239917936103460}
+  m_GameObject: {fileID: 1498026876853520}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -77,13 +136,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33566397163657688
+--- !u!33 &33769996665992874
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1239917936103460}
+  m_GameObject: {fileID: 1498026876853520}
   m_Mesh: {fileID: 4300000, guid: 78ffc1ed5f72076498d0614872cf48ec, type: 3}
+--- !u!65 &65673988051578972
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1239917936103460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7813346, y: 1.9101689, z: 0.8153348}
+  m_Center: {x: -0.047712944, y: 0.07249938, z: 0.0923325}
 --- !u!114 &114023943636940946
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b28578a3c605ca48ae9f37285e22a9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainingQuantity: 10
-  maxQuantity: 10
+  remainingQuantity: 0
+  maxQuantity: 0
   isOccupied: 0
   isExhausted: 0

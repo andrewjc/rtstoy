@@ -60,7 +60,7 @@ namespace Game
             float distanceToResource = (Vector2.Distance(VectorUtil.to2D(gameObject.transform.position), VectorUtil.to2D(dest)));
             if (distanceToResource > MIN_MINE_DISTANCE)
             {
-                gameObject.GetComponent<WorkerDroneAI>().beginWalkTo(VectorUtil.nearestPointOnGameObject(gameObject.transform.position, selectedCrystal.gameObject), MIN_MINE_DISTANCE, OnReachedTree);
+                gameObject.GetComponent<WorkerDroneAI>().beginMoveTo(VectorUtil.nearestPointOnGameObject(gameObject.transform.position, selectedCrystal.gameObject), OnReachedTree);
             }
         }
 
@@ -181,9 +181,8 @@ namespace Game
                     if (distanceToResource > MIN_MINE_DISTANCE)
                     {
                         gameObject.GetComponent<WorkerDroneAI>()
-                            .beginWalkTo(
-                                VectorUtil.nearestPointOnGameObject(gameObject.transform.position, selectedCrystal.gameObject),
-                                MIN_MINE_DISTANCE, OnReachedTree);
+                            .beginMoveTo(
+                                VectorUtil.nearestPointOnGameObject(gameObject.transform.position, selectedCrystal.gameObject),  OnReachedTree);
                     }
                     else
                     {
