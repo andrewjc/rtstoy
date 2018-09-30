@@ -38,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4612285046637330}
   - component: {fileID: 114216163032465254}
+  - component: {fileID: 114435173417653064}
   m_Layer: 0
   m_Name: Rover_Level1
   m_TagString: Untagged
@@ -494,3 +495,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectionRadius: 2
   selectionShape: 0
+--- !u!114 &114435173417653064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1156926628757166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e74533fc7d7758e43aec9524d7a9bfd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
